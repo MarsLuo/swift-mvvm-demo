@@ -27,7 +27,10 @@ extension CheckInViewController : UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SelectSetCell", for: indexPath)
-        
+        if let setCell = cell as? SelectSetCell {
+            setCell.viewModel = SelectSetViewModel()
+            setCell.configCell(indexPath)
+        }
         return cell
     }
 }

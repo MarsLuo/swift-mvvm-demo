@@ -222,15 +222,17 @@
                                                                 </collectionViewFlowLayout>
                                                                 <cells>
                                                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SelectSetCell" id="jOJ-9U-kco" customClass="SelectSetCell" customModule="SkyFly" customModuleProvider="target">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="36" height="36"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="36" height="40"/>
                                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ini-QK-Qsv">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="36" height="36"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="36" height="40"/>
                                                                             <autoresizingMask key="autoresizingMask"/>
                                                                             <subviews>
-                                                                                <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OXT-9R-Ea5">
-                                                                                    <rect key="frame" x="3" y="3" width="30" height="30"/>
-                                                                                    <state key="normal" title="33"/>
+                                                                                <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OXT-9R-Ea5">
+                                                                                    <rect key="frame" x="3" y="3" width="30" height="34"/>
+                                                                                    <state key="normal" title="33">
+                                                                                        <color key="titleColor" systemColor="systemOrangeColor"/>
+                                                                                    </state>
                                                                                 </button>
                                                                             </subviews>
                                                                             <constraints>

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -20,6 +20,7 @@
 		BEB798D025FCA57F00487304 /* SelectSetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB798CF25FCA57F00487304 /* SelectSetCell.swift */; };
 		BEB798D525FCA99D00487304 /* SelectSetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB798D425FCA99D00487304 /* SelectSetViewModel.swift */; };
 		BEB798DB25FCAAF600487304 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB798DA25FCAAF600487304 /* Service.swift */; };
+		BEB798EF25FCB47000487304 /* CheckInModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB798EE25FCB47000487304 /* CheckInModel.swift */; };
 		CD8905EF7E5105668B18E09F /* Pods_SkyFlyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C887D152CADAA54314896A8 /* Pods_SkyFlyTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +65,7 @@
 		BEB798CF25FCA57F00487304 /* SelectSetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectSetCell.swift; sourceTree = "<group>"; };
 		BEB798D425FCA99D00487304 /* SelectSetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectSetViewModel.swift; sourceTree = "<group>"; };
 		BEB798DA25FCAAF600487304 /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		BEB798EE25FCB47000487304 /* CheckInModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInModel.swift; sourceTree = "<group>"; };
 		F28DA510FB6A7723A7582E24 /* Pods-SkyFly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkyFly.debug.xcconfig"; path = "Target Support Files/Pods-SkyFly/Pods-SkyFly.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -102,7 +104,6 @@
 				846A643987EEE32B089CAE14 /* Pods-SkyFlyTests.debug.xcconfig */,
 				42B71982EE6C072A9864E0AA /* Pods-SkyFlyTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -171,6 +172,7 @@
 				BEB798C025FCA4A300487304 /* CheckInViewController.swift */,
 				BEB798CF25FCA57F00487304 /* SelectSetCell.swift */,
 				BEB798D425FCA99D00487304 /* SelectSetViewModel.swift */,
+				BEB798EE25FCB47000487304 /* CheckInModel.swift */,
 			);
 			path = CheckIn;
 			sourceTree = "<group>";
@@ -419,6 +421,7 @@
 				BEB798D025FCA57F00487304 /* SelectSetCell.swift in Sources */,
 				BEB7988E25FC88C000487304 /* AppDelegate.swift in Sources */,
 				BEB7989025FC88C000487304 /* SceneDelegate.swift in Sources */,
+				BEB798EF25FCB47000487304 /* CheckInModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -597,7 +600,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2F3WD5F3Z3;
-				INFOPLIST_FILE = SkyFly/Info.plist;
+				INFOPLIST_FILE = SkyFly/Other/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -617,7 +620,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2F3WD5F3Z3;
-				INFOPLIST_FILE = SkyFly/Info.plist;
+				INFOPLIST_FILE = SkyFly/Other/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

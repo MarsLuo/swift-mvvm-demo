@@ -13,7 +13,7 @@ var set = (id,row, section) => {
 }
 
 var error = {
-    setHasBeenBook: error("100001", "该座位已经被预订")
+    setHasBeenBook: error("100001", "该座位已经被预订，请换一个座位试一下")
 }
 
 var setModle = {

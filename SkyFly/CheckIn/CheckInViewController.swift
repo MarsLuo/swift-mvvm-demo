@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import KRProgressHUD
 
 
 class CheckInViewController: UIViewController {
@@ -39,10 +40,13 @@ extension CheckInViewController : UICollectionViewDataSource {
 
 extension CheckInViewController : UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        KRProgressHUD.show()
         viewModel.bookSeat(index: indexPath) { (seat) in
-            print(seat)
+            KRProgressHUD.dismiss()
+            collectionView.reloadData()
         } failure: { (error) in
-            print(error)
+//            KRProgressHUD.dismiss()
+            KRProgressHUD.showMessage(error.message)
         }
     }
 }

@@ -18,7 +18,7 @@ class CheckInViewModel: CheckInProtocol {
     static let demoIndex = IndexPath.init(row: 3, section: 3)
     static let passagerId = "1"
     let service: ServiceProrocol
-    let yourSeat: CheckInSeat?
+    var yourSeat: CheckInSeat?
     
     init (service: ServiceProrocol) {
         self.service = service
@@ -28,8 +28,9 @@ class CheckInViewModel: CheckInProtocol {
     func bookSeat(index:IndexPath, success:@escaping (CheckInSeat) -> Void, failure:@escaping (SFError) -> Void) {
         let seat = CheckInSeat(id: CheckInViewModel.passagerId, row: index.row, section: index.section, status: .yourSelect)
         service.requset(path: "/api/v1/mobile/passenger/\(CheckInViewModel.passagerId)/checkin", method: .post, parameters: seat.para()) { (data: CheckInSeat?, error) in
-            if let data = data {
-                success(data)
+            if let checkInSeat = data {
+                self.yourSeat = checkInSeat
+                success(checkInSeat)
             } else {
                 failure(error ?? SFError.unkown())
             }

@@ -5,7 +5,8 @@ target 'SkyFly' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
   pod 'Alamofire'
-
+  pod "KRProgressHUD"
+  
   # Pods for SkyFly
 
   target 'SkyFlyTests' do

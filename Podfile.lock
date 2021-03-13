@@ -1,24 +1,32 @@
 PODS:
   - Alamofire (5.4.1)
+  - KRActivityIndicatorView (3.0.7)
+  - KRProgressHUD (3.4.7):
+    - KRActivityIndicatorView (= 3.0.7)
   - Nimble (9.0.0)
   - Quick (3.1.2)
 
 DEPENDENCIES:
   - Alamofire
+  - KRProgressHUD
   - Nimble
   - Quick
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - KRActivityIndicatorView
+    - KRProgressHUD
     - Nimble
     - Quick
 
 SPEC CHECKSUMS:
   Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
+  KRActivityIndicatorView: ad69e89c4ce40c986cf580595be4829dcad0e35a
+  KRProgressHUD: a248f0bc6c9c2aed40a37b76e03ffecc7f85c887
   Nimble: 3b4ec3fd40f1dc178058e0981107721c615643d8
   Quick: 60f0ea3b8e0cfc0df3259a5c06a238ad8b3c46e0
 
-PODFILE CHECKSUM: 807d976801ae37295625c3241c865ea217e1ad15
+PODFILE CHECKSUM: a47afe8b58ced63c9eebfbc4d31606070d487c3f
 
 COCOAPODS: 1.10.1

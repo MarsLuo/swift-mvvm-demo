@@ -53,6 +53,7 @@ struct Service: ServiceProrocol {
             message = "服务器无法连接"
             
         default:
+            message = "unkown"
             break;
         }
         return SFError(code: "\(response.error!._code)", message: message)

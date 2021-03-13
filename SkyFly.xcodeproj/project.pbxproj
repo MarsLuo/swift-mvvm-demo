@@ -8,13 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		0789AAB59EA5CD2A09686BEF /* Pods_SkyFly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EAE451C109F23E407758994 /* Pods_SkyFly.framework */; };
+		BE0D739D25FD0B5800F037EB /* SurplusPresenterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0D739B25FD0B5800F037EB /* SurplusPresenterSpec.swift */; };
+		BE0D739E25FD0B5800F037EB /* StubService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0D739C25FD0B5800F037EB /* StubService.swift */; };
 		BEB7988E25FC88C000487304 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB7988D25FC88C000487304 /* AppDelegate.swift */; };
 		BEB7989225FC88C000487304 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB7989125FC88C000487304 /* ViewController.swift */; };
 		BEB7989525FC88C000487304 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEB7989325FC88C000487304 /* Main.storyboard */; };
 		BEB7989725FC88C200487304 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEB7989625FC88C200487304 /* Assets.xcassets */; };
 		BEB7989A25FC88C200487304 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEB7989825FC88C200487304 /* LaunchScreen.storyboard */; };
 		BEB798A525FC88C200487304 /* SkyFlyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB798A425FC88C200487304 /* SkyFlyTests.swift */; };
-		BEB798B025FC88C200487304 /* SkyFlyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB798AF25FC88C200487304 /* SkyFlyUITests.swift */; };
 		BEB798C125FCA4A400487304 /* CheckInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB798C025FCA4A300487304 /* CheckInViewController.swift */; };
 		BEB798D025FCA57F00487304 /* SelectSetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB798CF25FCA57F00487304 /* SelectSetCell.swift */; };
 		BEB798D525FCA99D00487304 /* SeatTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB798D425FCA99D00487304 /* SeatTools.swift */; };
@@ -33,13 +34,6 @@
 			remoteGlobalIDString = BEB7988925FC88C000487304;
 			remoteInfo = SkyFly;
 		};
-		BEB798AC25FC88C200487304 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BEB7988225FC88BF00487304 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = BEB7988925FC88C000487304;
-			remoteInfo = SkyFly;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +42,8 @@
 		42B71982EE6C072A9864E0AA /* Pods-SkyFlyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkyFlyTests.release.xcconfig"; path = "Target Support Files/Pods-SkyFlyTests/Pods-SkyFlyTests.release.xcconfig"; sourceTree = "<group>"; };
 		7EAE451C109F23E407758994 /* Pods_SkyFly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SkyFly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		846A643987EEE32B089CAE14 /* Pods-SkyFlyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkyFlyTests.debug.xcconfig"; path = "Target Support Files/Pods-SkyFlyTests/Pods-SkyFlyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BE0D739B25FD0B5800F037EB /* SurplusPresenterSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurplusPresenterSpec.swift; sourceTree = "<group>"; };
+		BE0D739C25FD0B5800F037EB /* StubService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StubService.swift; sourceTree = "<group>"; };
 		BEB7988A25FC88C000487304 /* SkyFly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SkyFly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEB7988D25FC88C000487304 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEB7989125FC88C000487304 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -58,9 +54,6 @@
 		BEB798A025FC88C200487304 /* SkyFlyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SkyFlyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEB798A425FC88C200487304 /* SkyFlyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyFlyTests.swift; sourceTree = "<group>"; };
 		BEB798A625FC88C200487304 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BEB798AB25FC88C200487304 /* SkyFlyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SkyFlyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BEB798AF25FC88C200487304 /* SkyFlyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyFlyUITests.swift; sourceTree = "<group>"; };
-		BEB798B125FC88C200487304 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BEB798C025FCA4A300487304 /* CheckInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInViewController.swift; sourceTree = "<group>"; };
 		BEB798CF25FCA57F00487304 /* SelectSetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectSetCell.swift; sourceTree = "<group>"; };
 		BEB798D425FCA99D00487304 /* SeatTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatTools.swift; sourceTree = "<group>"; };
@@ -85,13 +78,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD8905EF7E5105668B18E09F /* Pods_SkyFlyTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BEB798A825FC88C200487304 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,7 +109,6 @@
 			children = (
 				BEB7988C25FC88C000487304 /* SkyFly */,
 				BEB798A325FC88C200487304 /* SkyFlyTests */,
-				BEB798AE25FC88C200487304 /* SkyFlyUITests */,
 				BEB7988B25FC88C000487304 /* Products */,
 				3D5FB34DFD941EF458DFA0B4 /* Pods */,
 				72A6C1B400241BE51A54867A /* Frameworks */,
@@ -135,7 +120,6 @@
 			children = (
 				BEB7988A25FC88C000487304 /* SkyFly.app */,
 				BEB798A025FC88C200487304 /* SkyFlyTests.xctest */,
-				BEB798AB25FC88C200487304 /* SkyFlyUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -153,19 +137,12 @@
 		BEB798A325FC88C200487304 /* SkyFlyTests */ = {
 			isa = PBXGroup;
 			children = (
+				BE0D739C25FD0B5800F037EB /* StubService.swift */,
+				BE0D739B25FD0B5800F037EB /* SurplusPresenterSpec.swift */,
 				BEB798A425FC88C200487304 /* SkyFlyTests.swift */,
 				BEB798A625FC88C200487304 /* Info.plist */,
 			);
 			path = SkyFlyTests;
-			sourceTree = "<group>";
-		};
-		BEB798AE25FC88C200487304 /* SkyFlyUITests */ = {
-			isa = PBXGroup;
-			children = (
-				BEB798AF25FC88C200487304 /* SkyFlyUITests.swift */,
-				BEB798B125FC88C200487304 /* Info.plist */,
-			);
-			path = SkyFlyUITests;
 			sourceTree = "<group>";
 		};
 		BEB798C825FCA4AD00487304 /* CheckIn */ = {
@@ -244,24 +221,6 @@
 			productReference = BEB798A025FC88C200487304 /* SkyFlyTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		BEB798AA25FC88C200487304 /* SkyFlyUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BEB798BA25FC88C200487304 /* Build configuration list for PBXNativeTarget "SkyFlyUITests" */;
-			buildPhases = (
-				BEB798A725FC88C200487304 /* Sources */,
-				BEB798A825FC88C200487304 /* Frameworks */,
-				BEB798A925FC88C200487304 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				BEB798AD25FC88C200487304 /* PBXTargetDependency */,
-			);
-			name = SkyFlyUITests;
-			productName = SkyFlyUITests;
-			productReference = BEB798AB25FC88C200487304 /* SkyFlyUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -275,10 +234,6 @@
 						CreatedOnToolsVersion = 12.3;
 					};
 					BEB7989F25FC88C200487304 = {
-						CreatedOnToolsVersion = 12.3;
-						TestTargetID = BEB7988925FC88C000487304;
-					};
-					BEB798AA25FC88C200487304 = {
 						CreatedOnToolsVersion = 12.3;
 						TestTargetID = BEB7988925FC88C000487304;
 					};
@@ -299,7 +254,6 @@
 			targets = (
 				BEB7988925FC88C000487304 /* SkyFly */,
 				BEB7989F25FC88C200487304 /* SkyFlyTests */,
-				BEB798AA25FC88C200487304 /* SkyFlyUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -316,13 +270,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		BEB7989E25FC88C200487304 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BEB798A925FC88C200487304 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -433,15 +380,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE0D739D25FD0B5800F037EB /* SurplusPresenterSpec.swift in Sources */,
 				BEB798A525FC88C200487304 /* SkyFlyTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BEB798A725FC88C200487304 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BEB798B025FC88C200487304 /* SkyFlyUITests.swift in Sources */,
+				BE0D739E25FD0B5800F037EB /* StubService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,11 +393,6 @@
 			isa = PBXTargetDependency;
 			target = BEB7988925FC88C000487304 /* SkyFly */;
 			targetProxy = BEB798A125FC88C200487304 /* PBXContainerItemProxy */;
-		};
-		BEB798AD25FC88C200487304 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = BEB7988925FC88C000487304 /* SkyFly */;
-			targetProxy = BEB798AC25FC88C200487304 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -684,46 +620,6 @@
 			};
 			name = Release;
 		};
-		BEB798BB25FC88C200487304 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2F3WD5F3Z3;
-				INFOPLIST_FILE = SkyFlyUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.thoughtworks.SkyFlyUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = SkyFly;
-			};
-			name = Debug;
-		};
-		BEB798BC25FC88C200487304 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2F3WD5F3Z3;
-				INFOPLIST_FILE = SkyFlyUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.thoughtworks.SkyFlyUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = SkyFly;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -750,15 +646,6 @@
 			buildConfigurations = (
 				BEB798B825FC88C200487304 /* Debug */,
 				BEB798B925FC88C200487304 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		BEB798BA25FC88C200487304 /* Build configuration list for PBXNativeTarget "SkyFlyUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BEB798BB25FC88C200487304 /* Debug */,
-				BEB798BC25FC88C200487304 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

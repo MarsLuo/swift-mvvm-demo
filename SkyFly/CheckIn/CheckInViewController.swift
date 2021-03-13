@@ -25,20 +25,18 @@ class CheckInViewController: UIViewController {
     
     func bookSeat(index: IndexPath){
         KRProgressHUD.show()
+
         viewModel.bookSeat(index: index) { (seat) in
             KRProgressHUD.dismiss()
             self.collectionView.reloadData()
             self.retryButton.isHidden = true
-        } failure: { (error) in
-            KRProgressHUD.showMessage(error.message)
-            if error.code == CheckInViewModel.changeSeatCode {
-                self.retryButton.isHidden = true
-                self.collectionView.reloadData()
-            } else {
-                self.viewModel.retryIndex = index
-                self.retryButton.isHidden = false
-                self.retryButton.setTitle(self.viewModel.retryTitle(row: index.row, section: index.section), for: .normal)
-            }
+        } failure: { (message) in
+            KRProgressHUD.showMessage(message)
+            self.retryButton.isHidden = true
+            self.collectionView.reloadData()
+        } retry: { (message) in
+            self.retryButton.isHidden = false
+            self.retryButton.setTitle(self.viewModel.retryTitle(row: index.row, section: index.section), for: .normal)
         }
     }
 }

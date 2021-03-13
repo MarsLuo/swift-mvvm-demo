@@ -9,7 +9,7 @@ import Foundation
 import Alamofire
 
 protocol CheckInProtocol {
-    func bookSeat(index:IndexPath, success:@escaping (CheckInSeat) -> Void, failure:@escaping (SFError) -> Void)
+    func bookSeat(index:IndexPath, success:@escaping (CheckInSeat) -> Void, failure:@escaping (String) -> Void, retry:@escaping (String) -> Void)
     func getSeatStatus(row:Int, section:Int) -> SeatStatus
     var retryIndex: IndexPath? { get set }
     func retryTitle(row:Int, section:Int) -> String
@@ -35,14 +35,17 @@ class CheckInViewModel: CheckInProtocol {
         return "您选的是：\(SeatTools.rowNumber(section))\(SeatTools.typeString(row))，点此重试"
     }
     
-    func bookSeat(index:IndexPath, success:@escaping (CheckInSeat) -> Void, failure:@escaping (SFError) -> Void) {
+    func bookSeat(index:IndexPath, success:@escaping (CheckInSeat) -> Void, failure:@escaping (String) -> Void, retry:@escaping (String) -> Void) {
         let seat = CheckInSeat(id: CheckInViewModel.passagerId, row: index.row, section: index.section, status: .yourSelect)
         service.requset(path: "/api/v1/mobile/passenger/\(CheckInViewModel.passagerId)/checkin", method: .post, parameters: seat.para()) { (data: CheckInSeat?, error) in
             if let checkInSeat = data {
                 self.yourSeat = checkInSeat
                 success(checkInSeat)
+            } else if let skErrpr = error, skErrpr.code == CheckInViewModel.changeSeatCode {
+                failure(skErrpr.message)
             } else {
-                failure(error ?? SFError.unkown())
+                self.retryIndex = index
+                retry(error?.message ?? "")
             }
         }
     }

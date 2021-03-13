@@ -9,25 +9,43 @@ import Foundation
 import Alamofire
 
 protocol CheckInProtocol {
-    
+    func bookSeat(index:IndexPath, success:@escaping (CheckInSeat) -> Void, failure:@escaping (SFError) -> Void)
+    func getSeatStatus(row:Int, section:Int) -> SeatStatus
 }
 
 class CheckInViewModel: CheckInProtocol {
     
+    static let demoIndex = IndexPath.init(row: 3, section: 3)
     static let passagerId = "1"
     let service: ServiceProrocol
+    let yourSeat: CheckInSeat?
     
     init (service: ServiceProrocol) {
         self.service = service
+        self.yourSeat = nil
     }
     
-    func bookSet(set:CheckInSet, success:@escaping (CheckInSet) -> Void, failure:@escaping (SFError) -> Void) {
-        service.requset(path: "/api/v1/mobile/passenger/\(CheckInViewModel.passagerId)/checkin", method: .post, parameters: set.para()) { (data: CheckInSet?, error) in
+    func bookSeat(index:IndexPath, success:@escaping (CheckInSeat) -> Void, failure:@escaping (SFError) -> Void) {
+        let seat = CheckInSeat(id: CheckInViewModel.passagerId, row: index.row, section: index.section, status: .yourSelect)
+        service.requset(path: "/api/v1/mobile/passenger/\(CheckInViewModel.passagerId)/checkin", method: .post, parameters: seat.para()) { (data: CheckInSeat?, error) in
             if let data = data {
                 success(data)
             } else {
                 failure(error ?? SFError.unkown())
             }
         }
+    }
+    
+    func getSeatStatus(row:Int, section:Int) -> SeatStatus {
+        
+        if let selectedSeat = yourSeat, row == selectedSeat.row, section == selectedSeat.section {
+            return .yourSelect
+        }
+        
+        if row == CheckInViewModel.demoIndex.row, section == CheckInViewModel.demoIndex.section {
+            return .selectabel
+        }
+        
+        return Bool.random() ? .selectabel :.selected
     }
 }

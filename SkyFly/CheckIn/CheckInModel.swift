@@ -7,19 +7,19 @@
 
 import Foundation
 
-enum SetStatus : Int, Codable {
+enum SeatStatus : Int, Codable {
     case selectabel = 0
     case selected = 1
     case yourSelect = 2
 }
 
-struct CheckInSet: Codable {
+struct CheckInSeat: Codable {
     let id : String
     let row : Int
     let section : Int
-    let status: SetStatus
+    let status: SeatStatus
     
     func para() -> [String:Any] {
-        return ["row": row, "section": section]
+        return ["id":id, "row": row, "section": section]
     }
 }

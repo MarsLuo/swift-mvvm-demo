@@ -28,10 +28,10 @@ extension CheckInViewController : UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SelectSetCell", for: indexPath)
-        if let setCell = cell as? SelectSetCell {
-            setCell.viewModel = SelectSetViewModel()
-            setCell.configCell(indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SelectSeatCell", for: indexPath)
+        if let seatCell = cell as? SelectSeatCell {
+            seatCell.viewModel = SelectSeatViewModel()
+            seatCell.configCell(indexPath, status: viewModel.getSeatStatus(row: indexPath.row, section: indexPath.section))
         }
         return cell
     }
@@ -39,6 +39,10 @@ extension CheckInViewController : UICollectionViewDataSource {
 
 extension CheckInViewController : UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(indexPath)
+        viewModel.bookSeat(index: indexPath) { (seat) in
+            print(seat)
+        } failure: { (error) in
+            print(error)
+        }
     }
 }

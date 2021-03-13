@@ -23,8 +23,8 @@ server.pre(function(req, res, next) {
 // 路由配置
 require('./routes')(server, {baseURL: '/api/v1/mobile'});
 
-const port = 5051;
-const host = '127.0.0.1';
+const port = 8080;
+const host = '192.168.50.97';
 server.listen(port, host, () => {
   console.log('Mock server listening at %s', server.url);
 });

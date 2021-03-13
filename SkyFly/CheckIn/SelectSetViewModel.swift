@@ -1,5 +1,5 @@
 //
-//  SelectSetViewModel.swift
+//  SelectSeatViewModel.swift
 //  SkyFly
 //
 //  Created by Yang Dev Luo on 2021/3/13.
@@ -11,24 +11,24 @@ import UIKit
 enum SelectCellType {
     case empty
     case number
-    case setType
-    case set
+    case seatType
+    case seat
 }
 
-protocol SelectSetProtocol {
+protocol SelectSeatProtocol {
     
     func cellType(_ indexPath: IndexPath) -> SelectCellType
-    func cellImage(_ status: SetStatus) -> UIImage?
+    func cellImage(_ status: SeatStatus) -> UIImage?
     func typeString(_ row: Int) -> String
     func rowNumber(_ section: Int) -> String
     
 }
 
-class SelectSetViewModel: SelectSetProtocol {
+class SelectSeatViewModel: SelectSeatProtocol {
     
     static let types = ["P", "A", "B", "C", "", "H", "J", "K", "P"]
     
-    static let flySetNumber = 32
+    static let flySeatNumber = 32
     
     func cellType(_ indexPath: IndexPath) -> SelectCellType {
         
@@ -37,31 +37,31 @@ class SelectSetViewModel: SelectSetProtocol {
         }
         
         if indexPath.section == 0 {
-            return .setType
+            return .seatType
         }
         
         if indexPath.row == 0 || indexPath.row == 8 {
             return .number
         }
-        return .set
+        return .seat
     }
     
-    func cellImage(_ status: SetStatus) -> UIImage? {
+    func cellImage(_ status: SeatStatus) -> UIImage? {
         switch status {
         case .selectabel:
-            return UIImage(named: "select_set")
+            return UIImage(named: "select_seat")
         case .selected:
-            return UIImage(named: "selected_set")
+            return UIImage(named: "selected_seat")
         case .yourSelect:
-            return UIImage(named: "my_set")
+            return UIImage(named: "my_seat")
         }
     }
     
     func typeString(_ row: Int) -> String {
-        return SelectSetViewModel.types[row]
+        return SelectSeatViewModel.types[row]
     }
     
     func rowNumber(_ section: Int) -> String {
-        return "\(SelectSetViewModel.flySetNumber - section)"
+        return "\(SelectSeatViewModel.flySeatNumber - section)"
     }
 }

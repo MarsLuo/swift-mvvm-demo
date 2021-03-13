@@ -153,7 +153,7 @@
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="44" id="UtQ-f1-jc8"/>
                                                                 </constraints>
-                                                                <state key="normal" title="在线选座" image="icon_set">
+                                                                <state key="normal" title="在线选座" image="icon_seat">
                                                                     <color key="titleColor" systemColor="systemOrangeColor"/>
                                                                 </state>
                                                             </button>
@@ -174,37 +174,37 @@
                                                         <rect key="frame" x="0.0" y="45" width="414" height="44"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aic-GT-fVL">
-                                                                <rect key="frame" x="0.0" y="0.0" width="130" height="44"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="176" height="44"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="44" id="QsR-i1-mkz"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                                <state key="normal" title="您的座位" image="my_set">
+                                                                <state key="normal" title="您的座位" image="my_seat">
                                                                     <color key="titleColor" systemColor="labelColor"/>
                                                                 </state>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MbE-3B-vhG">
-                                                                <rect key="frame" x="130" y="0.0" width="94" height="44"/>
+                                                                <rect key="frame" x="176" y="0.0" width="94" height="44"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="44" id="Bqv-gC-P3q"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                                <state key="normal" title="可选座位" image="select_set">
+                                                                <state key="normal" title="可选座位" image="select_seat">
                                                                     <color key="titleColor" systemColor="labelColor"/>
                                                                 </state>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6If-aK-ZiM">
-                                                                <rect key="frame" x="224" y="0.0" width="94" height="44"/>
+                                                                <rect key="frame" x="270" y="0.0" width="94" height="44"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="44" id="enS-rb-Yn6"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                                <state key="normal" title="已选座位" image="selected_set">
+                                                                <state key="normal" title="已选座位" image="selected_seat">
                                                                     <color key="titleColor" systemColor="labelColor"/>
                                                                 </state>
                                                             </button>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CQR-ct-2UG">
-                                                                <rect key="frame" x="318" y="0.0" width="96" height="44"/>
+                                                                <rect key="frame" x="364" y="0.0" width="50" height="44"/>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                             </view>
                                                         </subviews>
@@ -222,7 +222,7 @@
                                                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                                 </collectionViewFlowLayout>
                                                                 <cells>
-                                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SelectSetCell" id="jOJ-9U-kco" customClass="SelectSetCell" customModule="SkyFly" customModuleProvider="target">
+                                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SelectSeatCell" id="jOJ-9U-kco" customClass="SelectSeatCell" customModule="SkyFly" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="0.0" width="36" height="40"/>
                                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ini-QK-Qsv">
@@ -364,10 +364,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="icon_set" width="32" height="32"/>
-        <image name="my_set" width="32" height="32"/>
-        <image name="select_set" width="32" height="32"/>
-        <image name="selected_set" width="32" height="32"/>
+        <image name="icon_seat" width="32" height="32"/>
+        <image name="my_seat" width="32" height="32"/>
+        <image name="select_seat" width="32" height="32"/>
+        <image name="selected_seat" width="32" height="32"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

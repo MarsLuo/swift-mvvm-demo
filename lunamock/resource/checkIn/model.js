@@ -6,8 +6,8 @@ var {error} = require('../response.js');
 var set = (id,row, section) => {
     return {
         id,
-        row,
-        section,
+        row:row,
+        section:section,
         status: 2, 
     };
 }

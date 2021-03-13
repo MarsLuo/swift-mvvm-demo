@@ -2,7 +2,7 @@ const _ = require('lodash');
 
 // 加载所有mock资源
 const resources = _.flatten([
-  require('./resource/users/users.js')
+  require('./resource/checkIn/checkIn.js')
 ]);
 
 class Display {

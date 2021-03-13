@@ -12,6 +12,8 @@ class CheckInViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+    var viewModel: CheckInProtocol!
+    
 }
 
 extension CheckInViewController : UICollectionViewDataSource {

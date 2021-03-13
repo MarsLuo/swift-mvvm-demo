@@ -17,7 +17,7 @@
 		BEB798B025FC88C200487304 /* SkyFlyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB798AF25FC88C200487304 /* SkyFlyUITests.swift */; };
 		BEB798C125FCA4A400487304 /* CheckInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB798C025FCA4A300487304 /* CheckInViewController.swift */; };
 		BEB798D025FCA57F00487304 /* SelectSetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB798CF25FCA57F00487304 /* SelectSetCell.swift */; };
-		BEB798D525FCA99D00487304 /* SelectSetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB798D425FCA99D00487304 /* SelectSetViewModel.swift */; };
+		BEB798D525FCA99D00487304 /* SeatTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB798D425FCA99D00487304 /* SeatTools.swift */; };
 		BEB798DB25FCAAF600487304 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB798DA25FCAAF600487304 /* Service.swift */; };
 		BEB798EF25FCB47000487304 /* CheckInModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB798EE25FCB47000487304 /* CheckInModel.swift */; };
 		BEB798F725FCCD0700487304 /* CheckInConfiger.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB798F625FCCD0700487304 /* CheckInConfiger.swift */; };
@@ -63,7 +63,7 @@
 		BEB798B125FC88C200487304 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BEB798C025FCA4A300487304 /* CheckInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInViewController.swift; sourceTree = "<group>"; };
 		BEB798CF25FCA57F00487304 /* SelectSetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectSetCell.swift; sourceTree = "<group>"; };
-		BEB798D425FCA99D00487304 /* SelectSetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectSetViewModel.swift; sourceTree = "<group>"; };
+		BEB798D425FCA99D00487304 /* SeatTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatTools.swift; sourceTree = "<group>"; };
 		BEB798DA25FCAAF600487304 /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		BEB798EE25FCB47000487304 /* CheckInModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInModel.swift; sourceTree = "<group>"; };
 		BEB798F625FCCD0700487304 /* CheckInConfiger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInConfiger.swift; sourceTree = "<group>"; };
@@ -173,7 +173,7 @@
 			children = (
 				BEB798C025FCA4A300487304 /* CheckInViewController.swift */,
 				BEB798CF25FCA57F00487304 /* SelectSetCell.swift */,
-				BEB798D425FCA99D00487304 /* SelectSetViewModel.swift */,
+				BEB798D425FCA99D00487304 /* SeatTools.swift */,
 				BEB798EE25FCB47000487304 /* CheckInModel.swift */,
 				BEB798F625FCCD0700487304 /* CheckInConfiger.swift */,
 				BEB798FB25FCCD4A00487304 /* CheckInViewModel.swift */,
@@ -419,7 +419,7 @@
 			files = (
 				BEB7989225FC88C000487304 /* ViewController.swift in Sources */,
 				BEB798DB25FCAAF600487304 /* Service.swift in Sources */,
-				BEB798D525FCA99D00487304 /* SelectSetViewModel.swift in Sources */,
+				BEB798D525FCA99D00487304 /* SeatTools.swift in Sources */,
 				BEB798C125FCA4A400487304 /* CheckInViewController.swift in Sources */,
 				BEB798FC25FCCD4A00487304 /* CheckInViewModel.swift in Sources */,
 				BEB798D025FCA57F00487304 /* SelectSetCell.swift in Sources */,

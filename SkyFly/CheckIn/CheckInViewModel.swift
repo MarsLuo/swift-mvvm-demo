@@ -11,18 +11,28 @@ import Alamofire
 protocol CheckInProtocol {
     func bookSeat(index:IndexPath, success:@escaping (CheckInSeat) -> Void, failure:@escaping (SFError) -> Void)
     func getSeatStatus(row:Int, section:Int) -> SeatStatus
+    var retryIndex: IndexPath? { get set }
+    func retryTitle(row:Int, section:Int) -> String
 }
 
 class CheckInViewModel: CheckInProtocol {
     
     static let demoIndex = IndexPath.init(row: 3, section: 3)
     static let passagerId = "1"
+    static let changeSeatCode = "100001"
+    
     let service: ServiceProrocol
     var yourSeat: CheckInSeat?
+    var retryIndex: IndexPath?
     
     init (service: ServiceProrocol) {
         self.service = service
         self.yourSeat = nil
+        self.retryIndex = nil
+    }
+    
+    func retryTitle(row: Int, section: Int) -> String {
+        return "您选的是：\(SeatTools.rowNumber(section))\(SeatTools.typeString(row))，点此重试"
     }
     
     func bookSeat(index:IndexPath, success:@escaping (CheckInSeat) -> Void, failure:@escaping (SFError) -> Void) {

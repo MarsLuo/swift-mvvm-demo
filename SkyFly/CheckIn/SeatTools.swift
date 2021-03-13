@@ -15,22 +15,13 @@ enum SelectCellType {
     case seat
 }
 
-protocol SelectSeatProtocol {
-    
-    func cellType(_ indexPath: IndexPath) -> SelectCellType
-    func cellImage(_ status: SeatStatus) -> UIImage?
-    func typeString(_ row: Int) -> String
-    func rowNumber(_ section: Int) -> String
-    
-}
-
-class SelectSeatViewModel: SelectSeatProtocol {
+struct SeatTools {
     
     static let types = ["P", "A", "B", "C", "", "H", "J", "K", "P"]
     
     static let flySeatNumber = 32
     
-    func cellType(_ indexPath: IndexPath) -> SelectCellType {
+   static func cellType(_ indexPath: IndexPath) -> SelectCellType {
         
         if indexPath.row == 4 {
             return .empty
@@ -46,7 +37,7 @@ class SelectSeatViewModel: SelectSeatProtocol {
         return .seat
     }
     
-    func cellImage(_ status: SeatStatus) -> UIImage? {
+    static func cellImage(_ status: SeatStatus) -> UIImage? {
         switch status {
         case .selectabel:
             return UIImage(named: "select_seat")
@@ -57,11 +48,11 @@ class SelectSeatViewModel: SelectSeatProtocol {
         }
     }
     
-    func typeString(_ row: Int) -> String {
-        return SelectSeatViewModel.types[row]
+    static func typeString(_ row: Int) -> String {
+        return SeatTools.types[row]
     }
     
-    func rowNumber(_ section: Int) -> String {
-        return "\(SelectSeatViewModel.flySeatNumber - section)"
+    static func rowNumber(_ section: Int) -> String {
+        return "\(SeatTools.flySeatNumber - section)"
     }
 }

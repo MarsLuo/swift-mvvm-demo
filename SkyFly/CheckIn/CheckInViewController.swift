@@ -7,14 +7,40 @@
 
 import UIKit
 import KRProgressHUD
-
+import Alamofire
 
 class CheckInViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+    @IBOutlet weak var retryButton: UIButton!
+    
     var viewModel: CheckInProtocol!
     
+    @IBAction func retryAction(_ sender: Any) {
+        if let index = viewModel.retryIndex {
+            bookSeat(index: index)
+        }
+    }
+    
+    func bookSeat(index: IndexPath){
+        KRProgressHUD.show()
+        viewModel.bookSeat(index: index) { (seat) in
+            KRProgressHUD.dismiss()
+            self.collectionView.reloadData()
+            self.retryButton.isHidden = true
+        } failure: { (error) in
+            KRProgressHUD.showMessage(error.message)
+            if error.code == CheckInViewModel.changeSeatCode {
+                self.retryButton.isHidden = true
+                self.collectionView.reloadData()
+            } else {
+                self.viewModel.retryIndex = index
+                self.retryButton.isHidden = false
+                self.retryButton.setTitle(self.viewModel.retryTitle(row: index.row, section: index.section), for: .normal)
+            }
+        }
+    }
 }
 
 extension CheckInViewController : UICollectionViewDataSource {
@@ -31,7 +57,6 @@ extension CheckInViewController : UICollectionViewDataSource {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SelectSeatCell", for: indexPath)
         if let seatCell = cell as? SelectSeatCell {
-            seatCell.viewModel = SelectSeatViewModel()
             seatCell.configCell(indexPath, status: viewModel.getSeatStatus(row: indexPath.row, section: indexPath.section))
         }
         return cell
@@ -40,13 +65,6 @@ extension CheckInViewController : UICollectionViewDataSource {
 
 extension CheckInViewController : UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        KRProgressHUD.show()
-        viewModel.bookSeat(index: indexPath) { (seat) in
-            KRProgressHUD.dismiss()
-            collectionView.reloadData()
-        } failure: { (error) in
-//            KRProgressHUD.dismiss()
-            KRProgressHUD.showMessage(error.message)
-        }
+     bookSeat(index: indexPath)
     }
 }

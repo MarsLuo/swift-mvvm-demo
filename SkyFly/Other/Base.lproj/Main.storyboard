@@ -158,9 +158,16 @@
                                                                 </state>
                                                             </button>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jBR-14-SRk">
-                                                                <rect key="frame" x="106" y="0.0" width="308" height="44"/>
+                                                                <rect key="frame" x="106" y="0.0" width="262" height="44"/>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                             </view>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iZA-nH-8Q3">
+                                                                <rect key="frame" x="368" y="0.0" width="46" height="44"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <connections>
+                                                                    <action selector="retryAction:" destination="aIR-Wp-z0D" eventType="touchUpInside" id="1rI-9c-ocm"/>
+                                                                </connections>
+                                                            </button>
                                                         </subviews>
                                                     </stackView>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0hU-X8-Ew0">
@@ -300,6 +307,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="4u0-Fg-10C" id="JH0-8w-unI"/>
+                        <outlet property="retryButton" destination="iZA-nH-8Q3" id="1ZT-9M-wGS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uJV-Nx-xbE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -21,11 +21,11 @@ class CheckInViewModel: CheckInProtocol {
     static let passagerId = "1"
     static let changeSeatCode = "100001"
     
-    let service: ServiceProrocol
+    let service: ServiceProtocol
     var yourSeat: CheckInSeat?
     var retryIndex: IndexPath?
     
-    init (service: ServiceProrocol) {
+    init (service: ServiceProtocol) {
         self.service = service
         self.yourSeat = nil
         self.retryIndex = nil

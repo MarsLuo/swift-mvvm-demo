@@ -27,7 +27,7 @@ class CheckInViewController: UIViewController {
         KRProgressHUD.show()
 
         viewModel.bookSeat(index: index) { (seat) in
-            KRProgressHUD.dismiss()
+            KRProgressHUD.showMessage("预定成功")
             self.collectionView.reloadData()
             self.retryButton.isHidden = true
         } failure: { (message) in
@@ -35,6 +35,7 @@ class CheckInViewController: UIViewController {
             self.retryButton.isHidden = true
             self.collectionView.reloadData()
         } retry: { (message) in
+            KRProgressHUD.showMessage(message)
             self.retryButton.isHidden = false
             self.retryButton.setTitle(self.viewModel.retryTitle(row: index.row, section: index.section), for: .normal)
         }

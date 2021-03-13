@@ -23,18 +23,35 @@ struct SFResponse<T:Codable>: Codable {
     let data:T?
 }
 
-protocol ServiceProrocol {
+protocol NetWorkClientProtocol {
+    func request<T:Decodable>(host:String,
+                      method: HTTPMethod,
+                      parameters: Parameters?,
+                      decodeType: T.Type,
+                      completionHandler: @escaping (AFDataResponse<T>) -> Void)
+}
+
+struct AFNetWorkImp: NetWorkClientProtocol {
+    func request<T>(host: String, method: HTTPMethod, parameters: Parameters?, decodeType: T.Type, completionHandler: @escaping (AFDataResponse<T>) -> Void) where T : Decodable {
+        AF.request(host, method: .post, parameters: parameters).responseDecodable(of: T.self, completionHandler: completionHandler)
+    }
+}
+
+protocol ServiceProtocol {
     func requset<T:Codable>(path: String, method: HTTPMethod, parameters:[String:Any], finished:@escaping (_ responseModel:T?,_ error: SFError?)->())
 }
 
-struct Service: ServiceProrocol {
+struct Service: ServiceProtocol {
     let host:String
-    init(host: String) {
+    let client:NetWorkClientProtocol
+    init(host: String, client:NetWorkClientProtocol) {
         self.host = host
+        self.client = client
     }
     
     func requset<T:Codable>(path: String, method: HTTPMethod, parameters:[String:Any], finished:@escaping (_ responseModel:T?,_ error: SFError?)->()) {
-        AF.request("\(host)\(path)",method: .post, parameters: parameters).responseDecodable(of: SFResponse<T>?.self) { response in
+        
+        client.request(host: "\(host)\(path)", method: .post, parameters: parameters, decodeType: SFResponse<T>?.self) { (response) in
             debugPrint("Response: \(response)")
             switch response.result {
             case .success(let data):
@@ -44,6 +61,17 @@ struct Service: ServiceProrocol {
                 finished(nil, surError)
             }
         }
+        
+//        AF.request("\(host)\(path)",method: .post, parameters: parameters).responseDecodable(of: SFResponse<T>?.self) { response in
+//            debugPrint("Response: \(response)")
+//            switch response.result {
+//            case .success(let data):
+//                finished(data?.data, data?.error)
+//            case .failure( _):
+//                let surError = self.mapError(response: response)
+//                finished(nil, surError)
+//            }
+//        }
     }
     
     func mapError<T:Codable>(response:Alamofire.DataResponse<T, AFError>) -> SFError  {

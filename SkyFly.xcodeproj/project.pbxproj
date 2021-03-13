@@ -1,0 +1,760 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0789AAB59EA5CD2A09686BEF /* Pods_SkyFly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EAE451C109F23E407758994 /* Pods_SkyFly.framework */; };
+		BEB7988E25FC88C000487304 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB7988D25FC88C000487304 /* AppDelegate.swift */; };
+		BEB7989025FC88C000487304 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB7988F25FC88C000487304 /* SceneDelegate.swift */; };
+		BEB7989225FC88C000487304 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB7989125FC88C000487304 /* ViewController.swift */; };
+		BEB7989525FC88C000487304 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEB7989325FC88C000487304 /* Main.storyboard */; };
+		BEB7989725FC88C200487304 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEB7989625FC88C200487304 /* Assets.xcassets */; };
+		BEB7989A25FC88C200487304 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEB7989825FC88C200487304 /* LaunchScreen.storyboard */; };
+		BEB798A525FC88C200487304 /* SkyFlyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB798A425FC88C200487304 /* SkyFlyTests.swift */; };
+		BEB798B025FC88C200487304 /* SkyFlyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB798AF25FC88C200487304 /* SkyFlyUITests.swift */; };
+		BEB798C125FCA4A400487304 /* CheckInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB798C025FCA4A300487304 /* CheckInViewController.swift */; };
+		BEB798D025FCA57F00487304 /* SelectSetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB798CF25FCA57F00487304 /* SelectSetCell.swift */; };
+		BEB798D525FCA99D00487304 /* SelectSetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB798D425FCA99D00487304 /* SelectSetViewModel.swift */; };
+		BEB798DB25FCAAF600487304 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB798DA25FCAAF600487304 /* Service.swift */; };
+		CD8905EF7E5105668B18E09F /* Pods_SkyFlyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C887D152CADAA54314896A8 /* Pods_SkyFlyTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BEB798A125FC88C200487304 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BEB7988225FC88BF00487304 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BEB7988925FC88C000487304;
+			remoteInfo = SkyFly;
+		};
+		BEB798AC25FC88C200487304 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BEB7988225FC88BF00487304 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BEB7988925FC88C000487304;
+			remoteInfo = SkyFly;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		14330A7C8C7BECAD42139B58 /* Pods-SkyFly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkyFly.release.xcconfig"; path = "Target Support Files/Pods-SkyFly/Pods-SkyFly.release.xcconfig"; sourceTree = "<group>"; };
+		3C887D152CADAA54314896A8 /* Pods_SkyFlyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SkyFlyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		42B71982EE6C072A9864E0AA /* Pods-SkyFlyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkyFlyTests.release.xcconfig"; path = "Target Support Files/Pods-SkyFlyTests/Pods-SkyFlyTests.release.xcconfig"; sourceTree = "<group>"; };
+		7EAE451C109F23E407758994 /* Pods_SkyFly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SkyFly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		846A643987EEE32B089CAE14 /* Pods-SkyFlyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkyFlyTests.debug.xcconfig"; path = "Target Support Files/Pods-SkyFlyTests/Pods-SkyFlyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BEB7988A25FC88C000487304 /* SkyFly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SkyFly.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEB7988D25FC88C000487304 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BEB7988F25FC88C000487304 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		BEB7989125FC88C000487304 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BEB7989425FC88C000487304 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BEB7989625FC88C200487304 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BEB7989925FC88C200487304 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BEB7989B25FC88C200487304 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BEB798A025FC88C200487304 /* SkyFlyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SkyFlyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEB798A425FC88C200487304 /* SkyFlyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyFlyTests.swift; sourceTree = "<group>"; };
+		BEB798A625FC88C200487304 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BEB798AB25FC88C200487304 /* SkyFlyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SkyFlyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEB798AF25FC88C200487304 /* SkyFlyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyFlyUITests.swift; sourceTree = "<group>"; };
+		BEB798B125FC88C200487304 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BEB798C025FCA4A300487304 /* CheckInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInViewController.swift; sourceTree = "<group>"; };
+		BEB798CF25FCA57F00487304 /* SelectSetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectSetCell.swift; sourceTree = "<group>"; };
+		BEB798D425FCA99D00487304 /* SelectSetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectSetViewModel.swift; sourceTree = "<group>"; };
+		BEB798DA25FCAAF600487304 /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		F28DA510FB6A7723A7582E24 /* Pods-SkyFly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkyFly.debug.xcconfig"; path = "Target Support Files/Pods-SkyFly/Pods-SkyFly.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BEB7988725FC88C000487304 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0789AAB59EA5CD2A09686BEF /* Pods_SkyFly.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEB7989D25FC88C200487304 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD8905EF7E5105668B18E09F /* Pods_SkyFlyTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEB798A825FC88C200487304 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3D5FB34DFD941EF458DFA0B4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F28DA510FB6A7723A7582E24 /* Pods-SkyFly.debug.xcconfig */,
+				14330A7C8C7BECAD42139B58 /* Pods-SkyFly.release.xcconfig */,
+				846A643987EEE32B089CAE14 /* Pods-SkyFlyTests.debug.xcconfig */,
+				42B71982EE6C072A9864E0AA /* Pods-SkyFlyTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		72A6C1B400241BE51A54867A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7EAE451C109F23E407758994 /* Pods_SkyFly.framework */,
+				3C887D152CADAA54314896A8 /* Pods_SkyFlyTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BEB7988125FC88BF00487304 = {
+			isa = PBXGroup;
+			children = (
+				BEB7988C25FC88C000487304 /* SkyFly */,
+				BEB798A325FC88C200487304 /* SkyFlyTests */,
+				BEB798AE25FC88C200487304 /* SkyFlyUITests */,
+				BEB7988B25FC88C000487304 /* Products */,
+				3D5FB34DFD941EF458DFA0B4 /* Pods */,
+				72A6C1B400241BE51A54867A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		BEB7988B25FC88C000487304 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BEB7988A25FC88C000487304 /* SkyFly.app */,
+				BEB798A025FC88C200487304 /* SkyFlyTests.xctest */,
+				BEB798AB25FC88C200487304 /* SkyFlyUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BEB7988C25FC88C000487304 /* SkyFly */ = {
+			isa = PBXGroup;
+			children = (
+				BEB798D925FCAAF600487304 /* Service */,
+				BEB798C825FCA4AD00487304 /* CheckIn */,
+				BEB798DF25FCAB0000487304 /* Other */,
+			);
+			path = SkyFly;
+			sourceTree = "<group>";
+		};
+		BEB798A325FC88C200487304 /* SkyFlyTests */ = {
+			isa = PBXGroup;
+			children = (
+				BEB798A425FC88C200487304 /* SkyFlyTests.swift */,
+				BEB798A625FC88C200487304 /* Info.plist */,
+			);
+			path = SkyFlyTests;
+			sourceTree = "<group>";
+		};
+		BEB798AE25FC88C200487304 /* SkyFlyUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BEB798AF25FC88C200487304 /* SkyFlyUITests.swift */,
+				BEB798B125FC88C200487304 /* Info.plist */,
+			);
+			path = SkyFlyUITests;
+			sourceTree = "<group>";
+		};
+		BEB798C825FCA4AD00487304 /* CheckIn */ = {
+			isa = PBXGroup;
+			children = (
+				BEB798C025FCA4A300487304 /* CheckInViewController.swift */,
+				BEB798CF25FCA57F00487304 /* SelectSetCell.swift */,
+				BEB798D425FCA99D00487304 /* SelectSetViewModel.swift */,
+			);
+			path = CheckIn;
+			sourceTree = "<group>";
+		};
+		BEB798D925FCAAF600487304 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				BEB798DA25FCAAF600487304 /* Service.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		BEB798DF25FCAB0000487304 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				BEB7988D25FC88C000487304 /* AppDelegate.swift */,
+				BEB7988F25FC88C000487304 /* SceneDelegate.swift */,
+				BEB7989125FC88C000487304 /* ViewController.swift */,
+				BEB7989325FC88C000487304 /* Main.storyboard */,
+				BEB7989625FC88C200487304 /* Assets.xcassets */,
+				BEB7989825FC88C200487304 /* LaunchScreen.storyboard */,
+				BEB7989B25FC88C200487304 /* Info.plist */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BEB7988925FC88C000487304 /* SkyFly */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BEB798B425FC88C200487304 /* Build configuration list for PBXNativeTarget "SkyFly" */;
+			buildPhases = (
+				9D8650CCFAE0CA3ECB3C5F72 /* [CP] Check Pods Manifest.lock */,
+				BEB7988625FC88C000487304 /* Sources */,
+				BEB7988725FC88C000487304 /* Frameworks */,
+				BEB7988825FC88C000487304 /* Resources */,
+				B845FDA9BB6A2BAB9BBB8A27 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SkyFly;
+			productName = SkyFly;
+			productReference = BEB7988A25FC88C000487304 /* SkyFly.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BEB7989F25FC88C200487304 /* SkyFlyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BEB798B725FC88C200487304 /* Build configuration list for PBXNativeTarget "SkyFlyTests" */;
+			buildPhases = (
+				90AB3670B8FCDA50386015B3 /* [CP] Check Pods Manifest.lock */,
+				BEB7989C25FC88C200487304 /* Sources */,
+				BEB7989D25FC88C200487304 /* Frameworks */,
+				BEB7989E25FC88C200487304 /* Resources */,
+				FB7D86EFDF6EEA92E4F8CFEE /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BEB798A225FC88C200487304 /* PBXTargetDependency */,
+			);
+			name = SkyFlyTests;
+			productName = SkyFlyTests;
+			productReference = BEB798A025FC88C200487304 /* SkyFlyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BEB798AA25FC88C200487304 /* SkyFlyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BEB798BA25FC88C200487304 /* Build configuration list for PBXNativeTarget "SkyFlyUITests" */;
+			buildPhases = (
+				BEB798A725FC88C200487304 /* Sources */,
+				BEB798A825FC88C200487304 /* Frameworks */,
+				BEB798A925FC88C200487304 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BEB798AD25FC88C200487304 /* PBXTargetDependency */,
+			);
+			name = SkyFlyUITests;
+			productName = SkyFlyUITests;
+			productReference = BEB798AB25FC88C200487304 /* SkyFlyUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BEB7988225FC88BF00487304 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1230;
+				LastUpgradeCheck = 1230;
+				TargetAttributes = {
+					BEB7988925FC88C000487304 = {
+						CreatedOnToolsVersion = 12.3;
+					};
+					BEB7989F25FC88C200487304 = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = BEB7988925FC88C000487304;
+					};
+					BEB798AA25FC88C200487304 = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = BEB7988925FC88C000487304;
+					};
+				};
+			};
+			buildConfigurationList = BEB7988525FC88BF00487304 /* Build configuration list for PBXProject "SkyFly" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BEB7988125FC88BF00487304;
+			productRefGroup = BEB7988B25FC88C000487304 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BEB7988925FC88C000487304 /* SkyFly */,
+				BEB7989F25FC88C200487304 /* SkyFlyTests */,
+				BEB798AA25FC88C200487304 /* SkyFlyUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BEB7988825FC88C000487304 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEB7989A25FC88C200487304 /* LaunchScreen.storyboard in Resources */,
+				BEB7989725FC88C200487304 /* Assets.xcassets in Resources */,
+				BEB7989525FC88C000487304 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEB7989E25FC88C200487304 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEB798A925FC88C200487304 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		90AB3670B8FCDA50386015B3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SkyFlyTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9D8650CCFAE0CA3ECB3C5F72 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SkyFly-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B845FDA9BB6A2BAB9BBB8A27 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SkyFly/Pods-SkyFly-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SkyFly/Pods-SkyFly-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SkyFly/Pods-SkyFly-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FB7D86EFDF6EEA92E4F8CFEE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SkyFlyTests/Pods-SkyFlyTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SkyFlyTests/Pods-SkyFlyTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SkyFlyTests/Pods-SkyFlyTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BEB7988625FC88C000487304 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEB7989225FC88C000487304 /* ViewController.swift in Sources */,
+				BEB798DB25FCAAF600487304 /* Service.swift in Sources */,
+				BEB798D525FCA99D00487304 /* SelectSetViewModel.swift in Sources */,
+				BEB798C125FCA4A400487304 /* CheckInViewController.swift in Sources */,
+				BEB798D025FCA57F00487304 /* SelectSetCell.swift in Sources */,
+				BEB7988E25FC88C000487304 /* AppDelegate.swift in Sources */,
+				BEB7989025FC88C000487304 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEB7989C25FC88C200487304 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEB798A525FC88C200487304 /* SkyFlyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEB798A725FC88C200487304 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEB798B025FC88C200487304 /* SkyFlyUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BEB798A225FC88C200487304 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BEB7988925FC88C000487304 /* SkyFly */;
+			targetProxy = BEB798A125FC88C200487304 /* PBXContainerItemProxy */;
+		};
+		BEB798AD25FC88C200487304 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BEB7988925FC88C000487304 /* SkyFly */;
+			targetProxy = BEB798AC25FC88C200487304 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BEB7989325FC88C000487304 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BEB7989425FC88C000487304 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BEB7989825FC88C200487304 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BEB7989925FC88C200487304 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BEB798B225FC88C200487304 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BEB798B325FC88C200487304 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BEB798B525FC88C200487304 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F28DA510FB6A7723A7582E24 /* Pods-SkyFly.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2F3WD5F3Z3;
+				INFOPLIST_FILE = SkyFly/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.thoughtworks.SkyFly;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BEB798B625FC88C200487304 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14330A7C8C7BECAD42139B58 /* Pods-SkyFly.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2F3WD5F3Z3;
+				INFOPLIST_FILE = SkyFly/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.thoughtworks.SkyFly;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BEB798B825FC88C200487304 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 846A643987EEE32B089CAE14 /* Pods-SkyFlyTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2F3WD5F3Z3;
+				INFOPLIST_FILE = SkyFlyTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.thoughtworks.SkyFlyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SkyFly.app/SkyFly";
+			};
+			name = Debug;
+		};
+		BEB798B925FC88C200487304 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 42B71982EE6C072A9864E0AA /* Pods-SkyFlyTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2F3WD5F3Z3;
+				INFOPLIST_FILE = SkyFlyTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.thoughtworks.SkyFlyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SkyFly.app/SkyFly";
+			};
+			name = Release;
+		};
+		BEB798BB25FC88C200487304 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2F3WD5F3Z3;
+				INFOPLIST_FILE = SkyFlyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.thoughtworks.SkyFlyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SkyFly;
+			};
+			name = Debug;
+		};
+		BEB798BC25FC88C200487304 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2F3WD5F3Z3;
+				INFOPLIST_FILE = SkyFlyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.thoughtworks.SkyFlyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SkyFly;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BEB7988525FC88BF00487304 /* Build configuration list for PBXProject "SkyFly" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BEB798B225FC88C200487304 /* Debug */,
+				BEB798B325FC88C200487304 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BEB798B425FC88C200487304 /* Build configuration list for PBXNativeTarget "SkyFly" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BEB798B525FC88C200487304 /* Debug */,
+				BEB798B625FC88C200487304 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BEB798B725FC88C200487304 /* Build configuration list for PBXNativeTarget "SkyFlyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BEB798B825FC88C200487304 /* Debug */,
+				BEB798B925FC88C200487304 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BEB798BA25FC88C200487304 /* Build configuration list for PBXNativeTarget "SkyFlyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BEB798BB25FC88C200487304 /* Debug */,
+				BEB798BC25FC88C200487304 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BEB7988225FC88BF00487304 /* Project object */;
+}

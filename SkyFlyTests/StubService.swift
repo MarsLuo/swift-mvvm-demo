@@ -10,7 +10,7 @@ import Foundation
 @testable import SkyFly
 import Alamofire
 
-struct StubService: ServiceProrocol {
+struct StubService: ServiceProtocol {
  
     var error: SFError?
     var data: Any?
@@ -23,7 +23,7 @@ struct StubService: ServiceProrocol {
         if let error = error {
             finished(nil, error)
         } else if let data = data{
-            finished(data as! T, error)
+            finished(data as? T, error)
         }
     }
 }

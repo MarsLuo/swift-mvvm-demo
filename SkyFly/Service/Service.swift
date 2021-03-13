@@ -61,23 +61,12 @@ struct Service: ServiceProtocol {
                 finished(nil, surError)
             }
         }
-        
-//        AF.request("\(host)\(path)",method: .post, parameters: parameters).responseDecodable(of: SFResponse<T>?.self) { response in
-//            debugPrint("Response: \(response)")
-//            switch response.result {
-//            case .success(let data):
-//                finished(data?.data, data?.error)
-//            case .failure( _):
-//                let surError = self.mapError(response: response)
-//                finished(nil, surError)
-//            }
-//        }
     }
     
     func mapError<T:Codable>(response:Alamofire.DataResponse<T, AFError>) -> SFError  {
         var message = ""
-        switch (response.error!._code){
-        case 13:
+        switch (response.error){
+        case .sessionTaskFailed:
             message = "服务器无法连接"
             
         default:

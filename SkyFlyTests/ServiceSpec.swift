@@ -80,9 +80,6 @@ class ServiceSpec: QuickSpec {
             it("checkIn path") {
                 let service = Service(host: "", client: StubNetWorkClient(success: false))
                 
-//                let result: Result<TestStruct, AFError> = .failure(.sessionDeinitialized)
-//                let response = AFDataResponse(request: nil, response: nil, data: nil, metrics: nil, serializationDuration: 1.0, result: result)
-                
                 service.chekcInSeat(passageId: "1", body: [:]) { (data:TestStruct?, error) in
                     
                 }

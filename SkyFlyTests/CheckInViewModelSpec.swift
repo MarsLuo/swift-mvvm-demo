@@ -1,6 +1,6 @@
 //
-//  SurplusPresenterSpec.swift
-//  SuppliesTests
+//  CheckInViewModelSpec.swift
+//  CheckInViewModelSpec
 //
 //  Created by Yang Dev Luo on 2021/1/17.
 //  Copyright © 2021 Thoughtworks. All rights reserved.

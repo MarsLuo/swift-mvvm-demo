@@ -18,8 +18,8 @@ node.js 12.13.1
 1. 在运行前需要执行 `pod install` 以更新相关依赖。
 
 ### 关于FakeServer
-1. 在运行前需要在FakeServer文件夹中，执行`npm install`， 以安装FakeServer依赖。
-2. 启动FakeServer, 执行`npm start`命令.
+1. 在运行前需要在 luanmock 文件夹中，执行`npm install`， 以安装FakeServer依赖。
+2. 启动 FakeServer, 执行`npm start`命令.
 
 
 

@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0789AAB59EA5CD2A09686BEF /* Pods_SkyFly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EAE451C109F23E407758994 /* Pods_SkyFly.framework */; };
-		BE0D739D25FD0B5800F037EB /* SurplusPresenterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0D739B25FD0B5800F037EB /* SurplusPresenterSpec.swift */; };
+		BE0D739D25FD0B5800F037EB /* CheckInViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0D739B25FD0B5800F037EB /* CheckInViewModelSpec.swift */; };
 		BE0D739E25FD0B5800F037EB /* StubService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0D739C25FD0B5800F037EB /* StubService.swift */; };
 		BE0D73AD25FD146B00F037EB /* ServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0D73AC25FD146B00F037EB /* ServiceSpec.swift */; };
 		BEB7988E25FC88C000487304 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB7988D25FC88C000487304 /* AppDelegate.swift */; };
@@ -43,7 +43,7 @@
 		42B71982EE6C072A9864E0AA /* Pods-SkyFlyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkyFlyTests.release.xcconfig"; path = "Target Support Files/Pods-SkyFlyTests/Pods-SkyFlyTests.release.xcconfig"; sourceTree = "<group>"; };
 		7EAE451C109F23E407758994 /* Pods_SkyFly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SkyFly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		846A643987EEE32B089CAE14 /* Pods-SkyFlyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkyFlyTests.debug.xcconfig"; path = "Target Support Files/Pods-SkyFlyTests/Pods-SkyFlyTests.debug.xcconfig"; sourceTree = "<group>"; };
-		BE0D739B25FD0B5800F037EB /* SurplusPresenterSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurplusPresenterSpec.swift; sourceTree = "<group>"; };
+		BE0D739B25FD0B5800F037EB /* CheckInViewModelSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckInViewModelSpec.swift; sourceTree = "<group>"; };
 		BE0D739C25FD0B5800F037EB /* StubService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StubService.swift; sourceTree = "<group>"; };
 		BE0D73AC25FD146B00F037EB /* ServiceSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceSpec.swift; sourceTree = "<group>"; };
 		BEB7988A25FC88C000487304 /* SkyFly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SkyFly.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -166,7 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				BE0D739C25FD0B5800F037EB /* StubService.swift */,
-				BE0D739B25FD0B5800F037EB /* SurplusPresenterSpec.swift */,
+				BE0D739B25FD0B5800F037EB /* CheckInViewModelSpec.swift */,
 				BEB798A425FC88C200487304 /* SkyFlyTests.swift */,
 				BE0D73AC25FD146B00F037EB /* ServiceSpec.swift */,
 				BEB798A625FC88C200487304 /* Info.plist */,
@@ -408,7 +408,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE0D73AD25FD146B00F037EB /* ServiceSpec.swift in Sources */,
-				BE0D739D25FD0B5800F037EB /* SurplusPresenterSpec.swift in Sources */,
+				BE0D739D25FD0B5800F037EB /* CheckInViewModelSpec.swift in Sources */,
 				BEB798A525FC88C200487304 /* SkyFlyTests.swift in Sources */,
 				BE0D739E25FD0B5800F037EB /* StubService.swift in Sources */,
 			);

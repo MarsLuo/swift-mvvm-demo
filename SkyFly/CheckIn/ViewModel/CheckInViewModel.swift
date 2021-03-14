@@ -15,6 +15,15 @@ protocol CheckInProtocol {
     func retryTitle(row:Int, section:Int) -> String
 }
 
+// checkInService
+extension Service {
+    func chekcInSeat<T:Codable>(passageId:String, body:[String:Any], finished:@escaping (_ responseModel:T?,_ error: SFError?)->()) {
+        requset(path: "/api/v1/mobile/passenger/\(passageId)/checkin", method: .post, parameters: body) { (data:T?, error) in
+            finished(data, error)
+        }
+    }
+}
+
 class CheckInViewModel: CheckInProtocol {
     
     static let demoIndex = IndexPath.init(row: 3, section: 3)

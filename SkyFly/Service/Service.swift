@@ -24,7 +24,7 @@ struct SFResponse<T:Codable>: Codable {
 }
 
 protocol NetWorkClientProtocol {
-    func request<T:Decodable>(host:String,
+    func request<T:Decodable>(path:String,
                       method: HTTPMethod,
                       parameters: Parameters?,
                       decodeType: T.Type,
@@ -32,13 +32,14 @@ protocol NetWorkClientProtocol {
 }
 
 struct AFNetWorkImp: NetWorkClientProtocol {
-    func request<T>(host: String, method: HTTPMethod, parameters: Parameters?, decodeType: T.Type, completionHandler: @escaping (AFDataResponse<T>) -> Void) where T : Decodable {
-        AF.request(host, method: .post, parameters: parameters).responseDecodable(of: T.self, completionHandler: completionHandler)
+    func request<T>(path: String, method: HTTPMethod, parameters: Parameters?, decodeType: T.Type, completionHandler: @escaping (AFDataResponse<T>) -> Void) where T : Decodable {
+        AF.request(path, method: .post, parameters: parameters).responseDecodable(of: T.self, completionHandler: completionHandler)
     }
 }
 
 protocol ServiceProtocol {
     func requset<T:Codable>(path: String, method: HTTPMethod, parameters:[String:Any], finished:@escaping (_ responseModel:T?,_ error: SFError?)->())
+    func chekcInSeat<T:Codable>(passageId:String, body:[String:Any], finished:@escaping (_ responseModel:T?,_ error: SFError?)->())
 }
 
 struct Service: ServiceProtocol {
@@ -51,7 +52,7 @@ struct Service: ServiceProtocol {
     
     func requset<T:Codable>(path: String, method: HTTPMethod, parameters:[String:Any], finished:@escaping (_ responseModel:T?,_ error: SFError?)->()) {
         
-        client.request(host: "\(host)\(path)", method: .post, parameters: parameters, decodeType: SFResponse<T>?.self) { (response) in
+        client.request(path: "\(host)\(path)", method: .post, parameters: parameters, decodeType: SFResponse<T>?.self) { (response) in
             debugPrint("Response: \(response)")
             switch response.result {
             case .success(let data):
@@ -74,5 +75,14 @@ struct Service: ServiceProtocol {
             break;
         }
         return SFError(code: "\(response.error!._code)", message: message)
+    }
+}
+
+// checkInService
+extension Service {
+    func chekcInSeat<T:Codable>(passageId:String, body:[String:Any], finished:@escaping (_ responseModel:T?,_ error: SFError?)->()) {
+        requset(path: "/api/v1/mobile/passenger/\(passageId)/checkin", method: .post, parameters: body) { (data:T?, error) in
+            finished(data, error)
+        }
     }
 }

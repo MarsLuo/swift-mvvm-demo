@@ -19,17 +19,24 @@ struct TestStruct : Codable {
 struct TestError :Error {
 }
 
-struct StubNetWorkClient: NetWorkClientProtocol {
+class StubNetWorkClient: NetWorkClientProtocol {
     let success:Bool
     
+    var path = ""
     
-    func request<T>(host: String, method: HTTPMethod, parameters: Parameters?, decodeType: T.Type, completionHandler: @escaping (AFDataResponse<T>) -> Void) where T : Decodable {
+    init(success: Bool) {
+        self.success = success
+    }
+    
+    func request<T>(path: String, method: HTTPMethod, parameters: Parameters?, decodeType: T.Type, completionHandler: @escaping (AFDataResponse<T>) -> Void) where T : Decodable {
         
         if !success {
             let result: Result<T, AFError> = .failure(.explicitlyCancelled)
             let response = AFDataResponse(request: nil, response: nil, data: nil, metrics: nil, serializationDuration: 1.0, result: result)
             completionHandler(response)
         }
+        
+        self.path = path
     }
 }
 
@@ -68,6 +75,20 @@ class ServiceSpec: QuickSpec {
                 
                 let error = service.mapError(response: response)
                 expect(error.message).to(equal("unkown"))
+            }
+            
+            it("checkIn path") {
+                let service = Service(host: "", client: StubNetWorkClient(success: false))
+                
+//                let result: Result<TestStruct, AFError> = .failure(.sessionDeinitialized)
+//                let response = AFDataResponse(request: nil, response: nil, data: nil, metrics: nil, serializationDuration: 1.0, result: result)
+                
+                service.chekcInSeat(passageId: "1", body: [:]) { (data:TestStruct?, error) in
+                    
+                }
+                if let client = service.client as? StubNetWorkClient {
+                    expect(client.path).to(equal("/api/v1/mobile/passenger/1/checkin"))
+                }
             }
         }
     }

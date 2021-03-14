@@ -37,7 +37,7 @@ class CheckInViewModel: CheckInProtocol {
     
     func bookSeat(index:IndexPath, success:@escaping (CheckInSeat) -> Void, failure:@escaping (String) -> Void, retry:@escaping (String) -> Void) {
         let seat = CheckInSeat(id: CheckInViewModel.passagerId, row: index.row, section: index.section, status: .yourSelect)
-        service.requset(path: "/api/v1/mobile/passenger/\(CheckInViewModel.passagerId)/checkin", method: .post, parameters: seat.para()) { (data: CheckInSeat?, error) in
+        service.chekcInSeat(passageId: CheckInViewModel.passagerId, body: seat.para()) { (data: CheckInSeat?, error) in
             if let checkInSeat = data {
                 self.yourSeat = checkInSeat
                 success(checkInSeat)

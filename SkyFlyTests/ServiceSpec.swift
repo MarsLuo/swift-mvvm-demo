@@ -19,7 +19,7 @@ struct TestStruct : Codable {
 struct TestError :Error {
 }
 
-struct TestNetWorkImp: NetWorkClientProtocol {
+struct StubNetWorkClient: NetWorkClientProtocol {
     let success:Bool
     
     
@@ -39,7 +39,7 @@ class ServiceSpec: QuickSpec {
         describe("test Service") {
             it("request failure ") {
                 
-                let service = Service(host: "", client: TestNetWorkImp(success: false))
+                let service = Service(host: "", client: StubNetWorkClient(success: false))
 
                 waitUntil { done in
                     service.requset(path: "", method: .get, parameters: [:]) { (data:TestStruct?, error) in
@@ -51,7 +51,7 @@ class ServiceSpec: QuickSpec {
             }
             
             it("mapError sessionTaskFailed") {
-                let service = Service(host: "", client: TestNetWorkImp(success: false))
+                let service = Service(host: "", client: StubNetWorkClient(success: false))
                 
                 let result: Result<TestStruct, AFError> = .failure(.sessionTaskFailed(error: TestError()))
                 let response = AFDataResponse(request: nil, response: nil, data: nil, metrics: nil, serializationDuration: 1.0, result: result)
@@ -61,7 +61,7 @@ class ServiceSpec: QuickSpec {
             }
             
             it("mapError unkown") {
-                let service = Service(host: "", client: TestNetWorkImp(success: false))
+                let service = Service(host: "", client: StubNetWorkClient(success: false))
                 
                 let result: Result<TestStruct, AFError> = .failure(.sessionDeinitialized)
                 let response = AFDataResponse(request: nil, response: nil, data: nil, metrics: nil, serializationDuration: 1.0, result: result)

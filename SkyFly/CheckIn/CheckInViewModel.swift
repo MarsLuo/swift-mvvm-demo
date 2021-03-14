@@ -45,7 +45,7 @@ class CheckInViewModel: CheckInProtocol {
                 failure(skErrpr.message)
             } else {
                 self.retryIndex = index
-                retry(error?.message ?? "")
+                retry("当前服务不可用，请点击重试按钮重试")
             }
         }
     }

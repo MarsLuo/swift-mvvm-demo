@@ -106,14 +106,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		BE0D73B225FDE50A00F037EB /* Tools */ = {
-			isa = PBXGroup;
-			children = (
-				BEB798D425FCA99D00487304 /* SeatTools.swift */,
-			);
-			path = Tools;
-			sourceTree = "<group>";
-		};
 		BE0D73B525FDE51800F037EB /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +118,7 @@
 		BE0D73B825FDE52200F037EB /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				BEB798D425FCA99D00487304 /* SeatTools.swift */,
 				BEB798EE25FCB47000487304 /* CheckInModel.swift */,
 				BEB798FB25FCCD4A00487304 /* CheckInViewModel.swift */,
 			);
@@ -178,7 +171,6 @@
 			isa = PBXGroup;
 			children = (
 				BE0D73B525FDE51800F037EB /* View */,
-				BE0D73B225FDE50A00F037EB /* Tools */,
 				BE0D73B825FDE52200F037EB /* ViewModel */,
 				BEB798F625FCCD0700487304 /* CheckInConfiger.swift */,
 			);

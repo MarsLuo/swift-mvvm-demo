@@ -24,7 +24,7 @@ server.pre(function(req, res, next) {
 require('./routes')(server, {baseURL: '/api/v1/mobile'});
 
 const port = 8080;
-const host = '192.168.50.97';
+const host = 'localhost';
 server.listen(port, host, () => {
   console.log('Mock server listening at %s', server.url);
 });

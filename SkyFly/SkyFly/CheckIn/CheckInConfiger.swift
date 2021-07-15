@@ -9,7 +9,7 @@ import Foundation
 
 final class CheckInConfiger {
     static func configCheckIn(checkIn: CheckInViewController){
-        let viewModel = CheckInViewModel(service: Service(host:"http://192.168.50.97:8080", client: AFNetWorkImp()))
+        let viewModel = CheckInViewModel(service: Service(host:"http://localhost:8080", client: AFNetWorkImp()))
         checkIn.viewModel = viewModel
     }
 }
